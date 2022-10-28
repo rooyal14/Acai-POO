@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/home/rooyal14/Desktop/Eclipse_directory/.metadata/.plugins/org.eclipse.jdt.core
-1739499602.index
-3022521592.index
-1865797976.index
