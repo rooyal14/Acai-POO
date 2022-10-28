@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Acai[] lista = new Acai[999];
+		lista[0] = new Acai("royal", 15.90, 700,"leite","granola");
+		lista[1] = new Acai("homearanh", 15.90, 700,"leite","granola","leite2");
+		lista[2] = new Acai("royal2", 15.90, 700,"leite","granola");
+		lista[3] = new Acai("royal3", 15.90, 700,"leite","granola");
+		
+		
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Insira 1 para cadastrar");
+		int input = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println(input);
+		
+		if (input == 1) {
+			System.out.println("DEU BOM");
+		} else {
+			System.out.println("DEU merda");
+		}
+
+		System.out.println(lista[3].nome);
+		
+		
+		scanner.close();
+		
+	}
+
+}

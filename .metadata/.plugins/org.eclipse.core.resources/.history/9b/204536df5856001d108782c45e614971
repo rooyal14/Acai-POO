@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Acai acaizinho = new Acai("royal", 15.90, 700,"leite");
+		System.out.println(acaizinho.acompanhamentos);
+		
+		
+		scanner.close();
+		
+	}
+
+}
