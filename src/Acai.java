@@ -1,40 +1,19 @@
+import java.util.ArrayList;
 
 public class Acai{
 	
 	String nome;
 	double preco;
 	int tamanho;
-	String acompanhamentos;
-	String acompanhamentos1;
-	String acompanhamentos2;
+	ArrayList<String> listaDeAcomps = new ArrayList<String>();
 	
-	public Acai(String nome, double preco,int tamanho, String acompanhamentos)
+	public Acai(String nome, double preco,int tamanho, ArrayList<String> listaDeAcomps)
 	{
 		this.nome = nome;
 		this.preco = preco;
 		this.tamanho = tamanho;
-		this.acompanhamentos = acompanhamentos;
+		this.listaDeAcomps = listaDeAcomps;
 	}
-	public Acai(String nome, double preco,int tamanho, String acompanhamentos,
-			String acompanhamentos1)
-	{
-		this.nome = nome;
-		this.preco = preco;
-		this.tamanho = tamanho;
-		this.acompanhamentos = acompanhamentos;
-		this.acompanhamentos1 = acompanhamentos1;
-	}
-	public Acai(String nome, double preco,int tamanho, String acompanhamentos,
-			String acompanhamentos1, String acompanhamentos2)
-	{
-		this.nome = nome;
-		this.preco = preco;
-		this.tamanho = tamanho;
-		this.acompanhamentos = acompanhamentos;
-		this.acompanhamentos1 = acompanhamentos1;
-		this.acompanhamentos2 = acompanhamentos2;
-	}
-	
 	
 	
 	
