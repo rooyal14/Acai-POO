@@ -4,40 +4,56 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		Pedido pedidinho = new Pedido("Rodrigo", "6922241350", "123-123-123-12");
-		System.out.println(pedidinho.rua);
-		pedidinho.definirEndereço("tranquedo", "tilapia", "6924");
-		System.out.println(pedidinho.rua);
-		
-		
+		//Hardcode teste
 		ArrayList<Acai> listaDeAcais = new ArrayList<Acai>();
-			
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Insira 1 para cadastrar ou insira 2 para fazer pedido");
-		int input = scanner.nextInt();scanner.nextLine();
-		System.out.println(input);
+		ArrayList<String> array = new ArrayList<String>();
+		array.add("granola");
+		array.add("leite");
+		listaDeAcais.add(new Acai("açaí do miranha",69.24,750,array));		
 		
-		if (input == 1) {
-			//CADASTRA
-			System.out.println("Bem vindo ao cadastramento");
-			adicionar(listaDeAcais, scanner);
+		
+		Pedido pedidinho = new Pedido("Rodrigo", "6922241350", "123-123-123-12");
+		pedidinho.definirEndereço("tranquedo", "tilapia", "6924");
+		
+		
+		//Main menu
+		Scanner scanner = new Scanner(System.in);
+		while (true) {
+			System.out.println("Insira 1 para cadastrar");
+			System.out.println("Insira 2 para fazer pedido");
+			System.out.println("Insira 3 para sair");
+			int input = scanner.nextInt();scanner.nextLine();
+			System.out.println(input);
 			
-		} else if(input == 2) {
-			//MOSTRA AÇAÍS
-			System.out.println("Bem vindo ao atendimento");
-			mostrar(listaDeAcais, scanner);
-			
-		} else {
-			System.out.println("else");
-			
-		}
+			if (input == 1) {
+				//CADASTRA
+				System.out.println("Bem vindo ao cadastramento");
+				adicionar(listaDeAcais, scanner);
 				
+			} else if (input == 2) {
+				//MOSTRA AÇAÍS
+				System.out.println("Bem vindo ao atendimento");
+				mostrar(listaDeAcais, scanner);
+				
+			} else if (input == 3) {
+				System.out.println("Saindo...");
+				break;
+				
+			}
+		}		
 		scanner.close();
 		
 	}
 	
 	static void mostrar(ArrayList<Acai> lista, Scanner scanner) {
-		
+		System.out.println("Lista das opções personalizadas:");
+		for (int i = 0; i<lista.size(); i++) {
+			System.out.println("Nome: "+lista.get(i).nome);
+			System.out.println("Preço: R$"+lista.get(i).preco);
+			System.out.println("Tamanho: "+lista.get(i).tamanho+"ml");
+			System.out.println("Acompanhamento(s): "+lista.get(i).listaDeAcomps);
+			System.out.println();
+		}
 	}
 	
 	static void adicionar(ArrayList<Acai> lista, Scanner scanner) {

@@ -1,4 +1,3 @@
-
 public class Pedido {
 	String nome;
 	String numeroDeTelefone;
